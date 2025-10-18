@@ -15,16 +15,7 @@ Tema: Neon (ungu), interaktif, dan menyimpan data secara lokal menggunakan `loca
 - Validasi form: nama dan mata kuliah wajib, deadline harus berformat `DD/MM/YYYY`, tanggal valid dan tidak boleh sebelum hari ini
 - Persistensi data menggunakan `localStorage`
 
-## Screenshot
-> Catatan: tambahkan tiga screenshot di folder `screenshots/` (atau letakkan gambar di repository). Berikut adalah placeholder yang bisa Anda ganti:
-
-1. screenshots/list-and-form.png — menampilkan form input dan daftar tugas
-2. screenshots/edit-task.png — menampilkan mode edit (form terisi) dan tombol simpan
-3. screenshots/filters-and-stats.png — menampilkan filter status, filter mata kuliah, dan statistik tugas belum selesai
-
-(Simpan file gambar ke folder `screenshots/` dengan nama di atas agar README menampilkan gambar)
-
-## Cara menjalankan
+## Cara menjalankan Aplikasi 
 1. Pastikan Anda memiliki browser modern (Chrome, Firefox, Edge).
 2. Buka folder proyek: `d:\Pengweb_RA_Ansel\AnselmusHerpinHasugian_123140020_pertemuan1`
 3. Buka file `index.html` di browser (double-click atau klik kanan → Open with > browser).
@@ -68,3 +59,4 @@ function saveTasks() {
 - Edit tugas → perubahan tersimpan.
 - Toggle selesai dan delete → berfungsi dan memperbarui penyimpanan.
 - Filter dan pencarian → menampilkan subset tugas sesuai kriteria.
+
