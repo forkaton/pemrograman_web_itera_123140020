@@ -1,0 +1,209 @@
+:root {
+  /* Neon palette */
+  --bg: #0b0f1a;
+  --card-bg: #071126;
+  --primary: #9b59ff; /* neon purple (primary) */
+  --accent: #c86bff; /* lighter neon purple accent */
+  --neon-pink: #ff6ad5;
+  --text: #e6f7ff;
+  --muted: #9aa7b2;
+  --success: #39ff14;
+  --danger: #ff3b3b;
+  --warning: #ffd166;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #02030a 0%, #071126 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+}
+
+.container {
+  background: linear-gradient(135deg, rgba(2,6,23,0.9), rgba(7,17,38,0.85));
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(124,77,255,0.12), inset 0 1px 0 rgba(255,255,255,0.02);
+  width: 92%;
+  max-width: 520px;
+  margin-top: 40px;
+  border: 1px solid rgba(124,77,255,0.12);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.card {
+  background: transparent;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+form input, form select, form button, .filter input, .filter select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.15s ease;
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+form input:focus, .filter input:focus, .filter select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 12px rgba(155,89,255,0.12);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #0b0711;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 26px rgba(155,89,255,0.18);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(155,89,255,0.28);
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0,245,255,0.03), rgba(124,77,255,0.03));
+  margin: 8px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  border-left: 3px solid rgba(0,245,255,0.18);
+}
+
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(124,77,255,0.06);
+}
+
+.task div {
+  flex: 1;
+}
+
+.task button {
+  margin-left: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.12s ease, text-shadow 0.12s;
+  color: var(--accent);
+}
+
+.task button:hover {
+  transform: scale(1.18);
+  text-shadow: 0 0 10px rgba(200,107,255,0.28);
+}
+
+.task .completed {
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+#stats {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px rgba(255,45,149,0.18);
+}
+
+/* Header glow */
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(155,89,255,0.22), 0 0 30px rgba(155,89,255,0.12);
+  animation: neonGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 6px rgba(155,89,255,0.12), 0 0 18px rgba(155,89,255,0.06); }
+  50% { text-shadow: 0 0 14px rgba(155,89,255,0.26), 0 0 40px rgba(155,89,255,0.14); }
+  100% { text-shadow: 0 0 6px rgba(155,89,255,0.12), 0 0 18px rgba(155,89,255,0.06); }
+}
+
+/* Placeholder style to match neon theme */
+::placeholder { color: rgba(230,247,255,0.55); }
+.filter input::placeholder, input::placeholder { color: rgba(230,247,255,0.52); }
+
+/* Date inputs row */
+.date-row {
+  display: flex;
+  gap: 8px;
+}
+.date-row input {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Constraint search/filter width to avoid overflow */
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 140px 140px;
+  gap: 8px;
+}
+
+@media (max-width: 520px) {
+  .filter { grid-template-columns: 1fr; }
+  .date-row { gap: 6px; }
+}
+
+/* flash effect when adding a task */
+.flash {
+  box-shadow: 0 0 0 rgba(200,120,255,0.0);
+  animation: flashPop 0.35s ease-in-out;
+}
+@keyframes flashPop {
+  0% { box-shadow: 0 0 0 rgba(200,120,255,0.0); transform: translateY(0); }
+  50% { box-shadow: 0 12px 40px rgba(200,120,255,0.18); transform: translateY(-4px); }
+  100% { box-shadow: 0 0 0 rgba(200,120,255,0.0); transform: translateY(0); }
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
