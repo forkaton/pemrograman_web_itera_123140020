@@ -3,6 +3,9 @@
 Aplikasi web sederhana untuk membantu mahasiswa mengelola tugas akademik.
 Tema: Neon (ungu), interaktif, dan menyimpan data secara lokal menggunakan `localStorage`.
 
+## Demo Aplikasi Manajemen Tugas Mahasiswa 
+https://forkaton.github.io/pemrograman_web_itera_123140020/AnselmusHerpinHasugian_123140020_pertemuan1/index.html
+
 ## Fitur singkat
 - Tambah tugas baru (Nama tugas, Mata Kuliah, Deadline (DD/MM/YYYY))
 - Edit tugas
@@ -59,5 +62,6 @@ function saveTasks() {
 - Edit tugas → perubahan tersimpan.
 - Toggle selesai dan delete → berfungsi dan memperbarui penyimpanan.
 - Filter dan pencarian → menampilkan subset tugas sesuai kriteria.
+
 
 
