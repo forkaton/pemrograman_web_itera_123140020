@@ -1,10 +1,10 @@
 # Tugas Praktikum: Aplikasi Personal Dashboard
 
-## Run Demo Tugas Praktikum 2 Anselmus Herpin Hasugian (123140020)
-link: https://mypersonal.rf.gd
-
 ## Deskripsi Singkat
 Aplikasi Personal Dashboard ini adalah aplikasi web sederhana untuk membantu mahasiswa mengelola daftar tugas kuliah secara interaktif. Pengguna dapat menambah, mengedit, menghapus, dan mencari tugas. Semua data tersimpan secara lokal di browser (localStorage) sehingga tetap aman meski halaman di-refresh.
+
+## Run Demo Tugas Praktikum 2 Anselmus Herpin Hasugian (123140020)
+link: https://mypersonal.rf.gd
 
 ## Fitur Utama
 - Menambah tugas kuliah (mata kuliah, hari, deadline, deskripsi)
@@ -52,4 +52,5 @@ Aplikasi Personal Dashboard ini adalah aplikasi web sederhana untuk membantu mah
 ---
 
 > Dibuat oleh Anselmus Herpin Hasugian (123140020) — Praktikum Pemrograman Web RA
+
 
