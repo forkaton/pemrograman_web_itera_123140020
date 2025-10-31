@@ -1,63 +1,68 @@
-# Aplikasi Manajemen Buku Pribadi (Praktikum React Dasar)
+# Tugas Praktikum: Aplikasi Manajemen Buku Pribadi (React)
 
-Aplikasi web berbasis React untuk mencatat koleksi buku pribadi dengan tema Neon Ungu. Dibuat untuk praktikum mata kuliah Pemrograman Aplikasi Web.
+## Deskripsi Singkat
+Aplikasi Manajemen Buku Pribadi ini adalah aplikasi web yang dibangun pakai **React** untuk praktikum Pemrograman Web. Tujuannya untuk membantu mencatat koleksi buku, buku yang sedang dibaca, atau yang baru ingin dibeli.
 
-## ✏️ Identitas Penyusun
+Aplikasi ini sepenuhnya *client-side*, data disimpan di `localStorage` jadi aman walau browser ditutup, dan sudah dilengkapi fitur *routing* untuk pindah halaman. Oh ya, temanya juga Neon Ungu sesuai permintaan!
 
-* **Nama:** [Anselmus Herpin Hasugian]
-* **NIM:** [123140020]
-* **Kelas:** [RB]
+## 🚀 Cara Menjalankan Aplikasi
+Aplikasi ini tidak di-deploy, tapi bisa dijalankan dengan mudah secara lokal:
 
----
-
-## 📸 Screenshot Aplikasi
-
-### Halaman Utama (Beranda)
-![Screenshot Halaman Home](link_ke_screenshot_home.png)
-*(Deskripsi: Halaman utama menampilkan form tambah buku, filter, pencarian, dan daftar buku yang tersimpan.)*
-
-### Halaman Statistik
-![Screenshot Halaman Statistik](link_ke_screenshot_stats.png)
-*(Deskripsi: Halaman statistik menampilkan jumlah total buku berdasarkan statusnya.)*
-
----
-
-## 🚀 Instruksi Instalasi dan Menjalankan
-
-1.  Clone repository ini.
-2.  Masuk ke folder praktikum:
+1.  Masuk ke folder praktikum:
     ```bash
     cd anselmusherpinhasugian_123140020_pertemuan3
     ```
-3.  Instal dependencies:
+2.  Instal *packages* yang dibutuhkan:
     ```bash
     npm install
     ```
-4.  Jalankan aplikasi:
+3.  Jalankan aplikasi:
     ```bash
     npm start
     ```
-5.  Buka `http://localhost:3000` di browser Anda.
+4.  Buka `http://localhost:3000` di browser.
 
----
+## Fitur Utama
+* **Tambah Buku:** Bisa menambah buku baru (judul, penulis, dan status).
+* **Hapus Buku:** Menghapus buku dari daftar.
+* **Simpan Permanen:** Data disimpan di `localStorage` jadi tidak hilang.
+* **Pencarian:** Mencari buku di koleksi secara *real-time* berdasarkan judul atau penulis.
+* **Filter:** Memfilter buku berdasarkan status (Milik, Dibaca, Ingin Beli).
+* **Pindah Halaman:** Navigasi antara Halaman Beranda dan Halaman Statistik.
+* **Statistik:** Halaman khusus untuk melihat rekap jumlah buku di koleksi.
 
-## 🛠️ Penjelasan Fitur React yang Digunakan
+## Persyaratan & Fitur React yang Dipakai
+Aplikasi ini dibuat untuk memenuhi semua poin di modul praktikum:
 
-* **Component-Based:** Aplikasi dipecah menjadi komponen reusable (Navbar, BookForm, BookList, BookItem, BookControls, StatCard).
-* **useState:** Digunakan untuk mengelola state lokal di komponen (contoh: input di `BookForm`).
-* **useEffect:** Digunakan di dalam custom hook `useLocalStorage` untuk sinkronisasi state dengan Local Storage.
-* **Context API:** Digunakan (`BookContext`) untuk state management global, menampung daftar buku, fungsi CRUD, dan state filter/pencarian.
-* **React Router:** Digunakan (`react-router-dom`) untuk navigasi multi-halaman antara `/` (Beranda) dan `/stats` (Statistik).
+* **Arsitektur Komponen:** Memecah UI menjadi komponen-komponen *reusable* (seperti `Navbar`, `BookForm`, `BookItem`, dll).
+* **Hooks (State & Lifecycle):**
+    * Menggunakan `useState` untuk mengelola *state* di form.
+    * Menggunakan `useEffect` di dalam *custom hook* `useLocalStorage`.
+* **State Management Global:**
+    * Menggunakan **Context API** (`BookContext`) untuk menyimpan semua data buku dan fungsi (tambah, hapus) secara global.
+* **Navigasi:**
+    * Menggunakan **React Router** untuk membuat aplikasi bisa pindah-pindah halaman (Beranda & Statistik).
 * **Custom Hooks:**
-    1.  `useLocalStorage`: Hook kustom untuk abstraksi logika baca/tulis ke Local Storage secara otomatis.
-    2.  `useBookStats`: Hook kustom untuk mengkalkulasi data statistik buku yang ditampilkan di halaman Stats.
-* **Error Handling:** Diterapkan di `BookForm` untuk validasi input kosong sebelum *submit*.
+    * Berhasil membuat 2 *custom hook*: `useLocalStorage` (untuk simpan data) dan `useBookStats` (untuk hitung statistik).
+* **Testing:**
+    * Berhasil membuat **5 test unit** menggunakan Jest dan React Testing Library, dan semua tesnya lulus (PASS).
+* **Error Handling:**
+    * Menerapkan *error handling* sederhana di form tambah buku.
+
+## Screenshot Aplikasi
+
+### Halaman Utama (Tambah & Daftar Buku)
+![Halaman Utama](./screenshots/home.png)
+*(Ganti path `screenshots/home.png` dengan path screenshot Anda)*
+
+### Halaman Statistik Buku
+![Halaman Statistik](./screenshots/stats.png)
+*(Ganti path `screenshots/stats.png` dengan path screenshot Anda)*
+
+### Laporan Hasil Testing (5 Tes Lulus)
+![Hasil Test](./screenshots/test.png)
+*(Ganti path `screenshots/test.png` dengan path screenshot Anda)*
 
 ---
 
-## 🧪 Laporan Testing
-
-Semua 5 test unit berhasil lolos. Tes ini mencakup rendering Navbar, *error handling* form, tampilan list kosong, dan rendering *search bar*.
-
-![Screenshot Hasil Test](link_ke_screenshot_test.png)
-*(Deskripsi: Hasil `npm test` menunjukkan 5 tes berhasil (passed).)*
+> Dibuat oleh Anselmus Herpin Hasugian (123140020) — Praktikum Pemrograman Web RA

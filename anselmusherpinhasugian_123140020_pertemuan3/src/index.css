@@ -1,66 +1,79 @@
-:root {
-  --bg-color: #1a0129; 
-  --primary-color: #d000ff; 
-  --secondary-color: #ff00c8; 
-  --text-color: #f0f0f0; 
-  --border-color: #5d00ff; 
-  --success-color: #00ff6a; 
-  --error-color: #ff3c00; 
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Variabel Warna Baru Anda */
+:root {
+  --purple: #b66dff;
+  --purple-glow: #e0b3ff;
+  --dark-bg: #0d001f;
+  --light-text: #e0d7ff;
+  --accent: #ff5cb6; /* Kita akan gunakan ini untuk tombol hapus */
+  --card-bg: rgba(40, 0, 80, 0.4);
+  --input-bg: rgba(255, 255, 255, 0.07);
+  --border-color: rgba(182, 109, 255, 0.2); /* Border ungu transparan */
+  
+  /* Warna Status Baru (untuk badge) */
+  --status-milik: #66ffc2; /* Hijau mint neon */
+  --status-baca: #ffad5c; /* Oranye neon */
+  --status-beli: #5cb6ff; /* Biru neon */
+}
+
+/* Reset Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  /* Latar belakang gradasi yang baru */
+  background: radial-gradient(circle at top left, #3b0066, #0d001f);
+  color: var(--light-text);
+  min-height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Default styling untuk input & tombol */
 input, select, textarea {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--text-color);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
   border: 1px solid var(--border-color);
-  border-radius: 5px;
-  padding: 10px;
+  background: var(--input-bg);
+  color: var(--light-text);
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 10px var(--primary-color);
+  border-color: var(--purple);
+  box-shadow: 0 0 15px rgba(182, 109, 255, 0.3);
 }
 
 button {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background: var(--purple);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  box-shadow: 0 0 15px var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--purple);
+}
+
+/* Default styling untuk judul */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--purple);
+  text-shadow: 0 0 10px var(--purple);
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--purple-glow);
   text-decoration: none;
-}
-
-h1, h2, h3 {
-  color: var(--primary-color);
-  text-shadow: 0 0 5px var(--secondary-color);
 }

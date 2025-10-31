@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar-container">
-      <h1 className="navbar-title">BukuNeon</h1>
+      <h1 className="navbar-title">My Personal Book Management</h1>
       <div className="navbar-links">
         {/* Link ini akan mengarahkan ke halaman yang kita atur di App.js nanti */}
         <Link to="/">Beranda</Link>

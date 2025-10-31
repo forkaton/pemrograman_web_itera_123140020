@@ -1,20 +1,31 @@
+/* src/components/BookForm/BookForm.css */
 .book-form {
-  background-color: rgba(255, 255, 255, 0.03);
-  padding: 1.5rem;
-  border-radius: 8px;
+  /* Menggunakan style kartu dari palet baru */
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
+  box-shadow: 0 0 30px rgba(182, 109, 255, 0.15);
+}
+
+.book-form h3 {
+  font-size: 1.8rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem; /* Jarak antar grup */
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: var(--secondary-color);
+  font-weight: 500;
+  color: var(--purple-glow);
+  font-size: 1.1rem;
 }
 
 .form-group input,
@@ -23,11 +34,20 @@
 }
 
 .form-error {
-  color: var(--error-color);
-  background-color: rgba(255, 60, 0, 0.1);
-  border: 1px solid var(--error-color);
-  padding: 0.5rem;
-  border-radius: 5px;
+  color: var(--accent); /* Menggunakan warna aksen */
+  background-color: rgba(255, 92, 182, 0.1);
+  border: 1px solid var(--accent);
+  padding: 1rem;
+  border-radius: 12px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Posisikan tombol di tengah */
+.book-form button[type="submit"] {
+  display: block;
+  margin: 1.5rem auto 0;
+  width: 50%;
+  min-width: 200px;
 }
