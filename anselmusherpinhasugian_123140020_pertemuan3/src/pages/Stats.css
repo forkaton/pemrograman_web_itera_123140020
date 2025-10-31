@@ -1,0 +1,44 @@
+/* src/pages/Stats.css */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  border: 1px solid var(--border-color);
+  background-color: rgba(43, 0, 69, 0.4);
+  box-shadow: 0 0 20px rgba(208, 0, 255, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: none; /* Override shadow default */
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Warna-warna Neon */
+.card-total .stat-value { color: var(--primary-color); }
+.card-milik .stat-value { color: var(--success-color); }
+.card-baca .stat-value { color: var(--secondary-color); }
+.card-beli .stat-value { color: #00d9ff; }
