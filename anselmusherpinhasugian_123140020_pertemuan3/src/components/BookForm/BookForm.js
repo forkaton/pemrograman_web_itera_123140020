@@ -55,11 +55,19 @@ const BookForm = () => {
       </div>
       <div className="form-group">
         <label>Status</label>
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
+        
+        {/* ----- INI BAGIAN YANG DIPERBAIKI ----- */}
+        <select 
+          value={status} 
+          onChange={(e) => setStatus(e.target.value)}
+          className={`status-select status-${status}`} 
+        >
           <option value="beli">Ingin Dibeli</option>
           <option value="baca">Sedang Dibaca</option>
           <option value="milik">Sudah Dimiliki</option>
         </select>
+        {/* ----- AKHIR BAGIAN YANG DIPERBAIKI ----- */}
+
       </div>
       <button type="submit">Tambah Buku</button>
     </form>

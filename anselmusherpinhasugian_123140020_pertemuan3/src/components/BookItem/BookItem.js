@@ -3,21 +3,24 @@ import { useBooks } from '../../context/BookContext';
 import './BookItem.css';
 
 const BookItem = ({ book }) => {
-  const { deleteBook } = useBooks();
+  const { deleteBook, editBook } = useBooks();
 
-  // Fungsi untuk fitur edit (sesuai permintaan praktikum)
-  // Kita gunakan prompt sederhana untuk demo.
+  // ----- INI BAGIAN YANG DIPERBAIKI -----
   const handleEdit = () => {
+    // 1. Minta judul baru
     const newTitle = prompt("Masukkan judul baru:", book.title);
+    // Jika user menekan "Cancel" (null) atau mengosongkan, hentikan fungsi
+    if (newTitle === null || newTitle === "") return; 
+
+    // 2. Minta penulis baru
     const newAuthor = prompt("Masukkan penulis baru:", book.author);
-    
-    if (newTitle && newAuthor) {
-      alert("Fitur edit belum diimplementasikan di context!");
-      // NANTI KITA IMPLEMENTASIKAN: editBook(book.id, { title: newTitle, author: newAuthor });
-    }
+    // Jika user menekan "Cancel" (null) atau mengosongkan, hentikan fungsi
+    if (newAuthor === null || newAuthor === "") return;
+
+    // 3. Panggil fungsi editBook dari context dengan data baru
+    editBook(book.id, { title: newTitle, author: newAuthor });
   };
 
-  // Helper untuk mengubah 'milik' -> 'Sudah Dimiliki'
   const getStatusLabel = (status) => {
     if (status === 'baca') return 'Sedang Dibaca';
     if (status === 'milik') return 'Sudah Dimiliki';

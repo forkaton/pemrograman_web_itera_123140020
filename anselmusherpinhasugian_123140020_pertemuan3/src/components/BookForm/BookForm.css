@@ -51,3 +51,30 @@
   width: 50%;
   min-width: 200px;
 }
+
+/* ----- INI BAGIAN YANG DITAMBAHKAN ----- */
+.status-select {
+  /* Paksa warna teks jadi gelap agar kontras. 
+     !important perlu karena ada style global
+  */
+  color: var(--dark-bg) !important; 
+  font-weight: 600;
+  text-shadow: none;
+}
+
+/* Ganti background berdasarkan kelas status */
+.status-select.status-milik {
+  background-color: var(--status-milik);
+}
+.status-select.status-baca {
+  background-color: var(--status-baca);
+}
+.status-select.status-beli {
+  background-color: var(--status-beli);
+}
+
+.status-select option {
+  background-color: #3b0066; /* Background gelap untuk dropdown */
+  color: var(--light-text); /* Teks cerah */
+  font-weight: 500;
+}
