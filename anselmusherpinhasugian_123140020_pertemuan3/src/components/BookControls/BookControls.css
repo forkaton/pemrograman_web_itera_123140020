@@ -1,0 +1,31 @@
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* Biar rapi di layar kecil */
+}
+
+.search-bar {
+  flex-grow: 1;
+}
+
+.search-bar input {
+  width: 100%;
+  min-width: 250px;
+}
+
+.filter-buttons button {
+  margin-left: 0.5rem;
+  border-color: var(--border-color);
+  color: var(--border-color);
+}
+
+/* Style untuk tombol filter yang sedang aktif */
+.filter-buttons button.active {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}

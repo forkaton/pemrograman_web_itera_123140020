@@ -1,0 +1,31 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(26, 1, 41, 0.8); /* Warna background transparan */
+  border-bottom: 2px solid var(--border-color);
+  backdrop-filter: blur(5px); /* Efek blur keren */
+  position: sticky; /* Membuat navbar tetap di atas */
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.navbar-links a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
