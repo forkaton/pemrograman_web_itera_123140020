@@ -1,67 +1,91 @@
+/* src/components/BookItem/BookItem.css */
 .book-item-card {
-  background-color: rgba(43, 0, 69, 0.4);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  background: var(--input-bg); /* Latar belakang item baru */
+  border-radius: 16px;
   padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
   position: relative;
-  transition: all 0.2s ease-in-out;
+  overflow: hidden; /* Untuk badge */
 }
 
 .book-item-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(208, 0, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(182, 109, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
+.book-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--light-text); /* Teks lebih cerah */
+  text-shadow: none;
+  margin-bottom: 0.25rem;
+}
+
+.book-author {
+  font-size: 1rem;
+  color: var(--purple-glow);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* Aksi (Tombol Edit/Hapus) */
+.book-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.book-actions button {
+  background: transparent;
+  border: none;
+  font-size: 1rem; /* Ukuran teks, bukan ikon */
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: none; /* Hapus shadow default */
+}
+
+/* Tombol Edit */
+.book-actions .btn-edit {
+  color: var(--purple-glow);
+}
+.book-actions .btn-edit:hover {
+  background: none;
+  color: var(--purple);
+  transform: none;
+  text-shadow: 0 0 10px var(--purple);
+}
+
+/* Tombol Hapus */
+.book-actions .btn-delete {
+  color: var(--accent); /* Warna pink aksen */
+}
+.book-actions .btn-delete:hover {
+  background: none;
+  color: var(--accent);
+  transform: none;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* Badge Status */
 .status-badge {
   position: absolute;
   top: 15px;
   right: 15px;
-  padding: 5px 10px;
-  border-radius: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--bg-color);
+  font-weight: 600;
+  color: var(--dark-bg); /* Teks gelap agar kontras */
   text-shadow: none;
 }
 
-/* Warna-warna badge neon */
-.status-milik { background-color: var(--success-color); }
-.status-baca { background-color: var(--secondary-color); }
-.status-beli { background-color: #00d9ff; } /* Biru neon */
-
-.book-title {
-  margin: 0 0 0.5rem 0;
-  color: var(--text-color);
-  text-shadow: none; /* Hilangkan shadow default h3 di dalam card */
-}
-
-.book-author {
-  margin: 0 0 1rem 0;
-  color: #ccc;
-  font-style: italic;
-}
-
-.book-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* Tombol Edit warna hijau neon */
-.book-actions .btn-edit {
-  border-color: var(--success-color);
-  color: var(--success-color);
-}
-.book-actions .btn-edit:hover {
-  background-color: var(--success-color);
-  color: var(--bg-color);
-}
-
-/* Tombol Hapus warna merah neon */
-.book-actions .btn-delete {
-  border-color: var(--error-color);
-  color: var(--error-color);
-}
-.book-actions .btn-delete:hover {
-  background-color: var(--error-color);
-  color: var(--bg-color);
-}
+/* Warna badge baru dari root */
+.status-milik { background-color: var(--status-milik); }
+.status-baca { background-color: var(--status-baca); }
+.status-beli { background-color: var(--status-beli); }

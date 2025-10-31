@@ -1,7 +1,7 @@
 /* src/App.css */
 .main-content {
-  /* Memberi batas lebar maksimum dan menengahkan konten */
+  width: 100%;
   max-width: 1200px;
-  margin: 2rem auto; /* 2rem jarak atas/bawah, auto jarak kiri/kanan (tengah) */
-  padding: 0 2rem; /* Jarak di samping agar tidak menempel di layar kecil */
+  margin: 2rem auto; /* Jarak atas/bawah dan auto kiri/kanan */
+  padding: 0 1rem; /* Padding di layar kecil */
 }

@@ -1,10 +1,11 @@
+/* src/components/BookControls/BookControls.css */
 .controls-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  gap: 1rem;
-  flex-wrap: wrap; /* Biar rapi di layar kecil */
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .search-bar {
@@ -14,18 +15,34 @@
 .search-bar input {
   width: 100%;
   min-width: 250px;
+  background: var(--input-bg); /* Latar belakang input baru */
 }
 
+.filter-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Tombol filter akan kita buat "ghost" (transparan) sampai aktif */
 .filter-buttons button {
-  margin-left: 0.5rem;
-  border-color: var(--border-color);
-  color: var(--border-color);
+  background: transparent;
+  color: var(--purple-glow);
+  border: 1px solid var(--purple);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* Style untuk tombol filter yang sedang aktif */
+.filter-buttons button:hover {
+  background: var(--input-bg);
+  color: var(--purple);
+  transform: none; /* Matikan efek hover global */
+  box-shadow: none; /* Matikan efek hover global */
+}
+
 .filter-buttons button.active {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  border-color: var(--primary-color);
-  box-shadow: 0 0 10px var(--primary-color);
+  background: var(--purple);
+  color: white;
+  box-shadow: 0 0 15px var(--purple);
 }

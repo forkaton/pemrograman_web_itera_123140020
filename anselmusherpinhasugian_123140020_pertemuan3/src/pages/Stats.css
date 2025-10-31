@@ -1,21 +1,26 @@
 /* src/pages/Stats.css */
+.stats-page-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .stat-card {
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  color: white;
+  /* Menggunakan style kartu dari palet baru */
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
-  background-color: rgba(43, 0, 69, 0.4);
-  box-shadow: 0 0 20px rgba(208, 0, 255, 0.1);
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 30px rgba(182, 109, 255, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .stat-card:hover {
@@ -24,21 +29,21 @@
 
 .stat-value {
   font-size: 3.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--light-text); /* Teks cerah */
+  text-shadow: none;
   margin: 0;
-  color: white;
-  text-shadow: none; /* Override shadow default */
 }
 
 .stat-title {
   font-size: 1.1rem;
   margin: 0;
   font-weight: 500;
-  opacity: 0.9;
+  color: var(--purple-glow); /* Teks ungu muda */
 }
 
-/* Warna-warna Neon */
-.card-total .stat-value { color: var(--primary-color); }
-.card-milik .stat-value { color: var(--success-color); }
-.card-baca .stat-value { color: var(--secondary-color); }
-.card-beli .stat-value { color: #00d9ff; }
+/* Warna spesifik untuk nilai statistik */
+.card-total .stat-value { color: var(--purple); }
+.card-milik .stat-value { color: var(--status-milik); }
+.card-baca .stat-value { color: var(--status-baca); }
+.card-beli .stat-value { color: var(--status-beli); }
