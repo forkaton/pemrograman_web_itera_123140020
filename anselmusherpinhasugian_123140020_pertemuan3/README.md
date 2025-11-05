@@ -53,15 +53,18 @@ Aplikasi ini dibuat untuk memenuhi semua poin di modul praktikum:
 
 ### Halaman Utama (Tambah & Daftar Buku)
 ![Halaman Utama](./screenshots/home.png)
-*(Ganti path `screenshots/home.png` dengan path screenshot Anda)*
+
+### Fitur CRUD dan LocalHost (Menambah Buku)
+![Menambahkan Buku](./screenshots/menambah.png)
+
+### Fitur CRUD dan LocalHost (Mengedit atau Menghapus Buku dari LocalHost)
+![Mengedit Buku](./screenshots/mengedit.png)
 
 ### Halaman Statistik Buku
 ![Halaman Statistik](./screenshots/stats.png)
-*(Ganti path `screenshots/stats.png` dengan path screenshot Anda)*
 
 ### Laporan Hasil Testing (5 Tes Lulus)
 ![Hasil Test](./screenshots/test.png)
-*(Ganti path `screenshots/test.png` dengan path screenshot Anda)*
 
 ---
 
