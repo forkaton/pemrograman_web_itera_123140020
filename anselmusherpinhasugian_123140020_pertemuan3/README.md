@@ -6,7 +6,7 @@ Aplikasi Manajemen Buku Pribadi ini adalah aplikasi web yang dibangun pakai **Re
 Aplikasi ini smenyimpan data di `localStorage` jadi aman walaupun browser ditutup, dan sudah dilengkapi fitur *routing* untuk pindah halaman.
 
 ## Run Demo Tugas Praktikum 3 Anselmus Herpin Hasugian (123140020)
-link: bukusaya.page.gd
+link: https://bukusaya.page.gd
 
 ## Cara Menjalankan Aplikasi
 Aplikasi ini tidak di-deploy, tapi bisa dijalankan dengan mudah secara lokal:
