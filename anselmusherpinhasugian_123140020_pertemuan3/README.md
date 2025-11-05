@@ -5,7 +5,7 @@ Aplikasi Manajemen Buku Pribadi ini adalah aplikasi web yang dibangun pakai **Re
 
 Aplikasi ini sepenuhnya *client-side*, data disimpan di `localStorage` jadi aman walau browser ditutup, dan sudah dilengkapi fitur *routing* untuk pindah halaman. Oh ya, temanya juga Neon Ungu sesuai permintaan!
 
-## 🚀 Cara Menjalankan Aplikasi
+## Cara Menjalankan Aplikasi
 Aplikasi ini tidak di-deploy, tapi bisa dijalankan dengan mudah secara lokal:
 
 1.  Masuk ke folder praktikum:
