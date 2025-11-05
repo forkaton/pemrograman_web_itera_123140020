@@ -1,9 +1,12 @@
 # Tugas Praktikum: Aplikasi Manajemen Buku Pribadi (React)
 
 ## Deskripsi Singkat
-Aplikasi Manajemen Buku Pribadi ini adalah aplikasi web yang dibangun pakai **React** untuk praktikum Pemrograman Web. Tujuannya untuk membantu mencatat koleksi buku, buku yang sedang dibaca, atau yang baru ingin dibeli.
+Aplikasi Manajemen Buku Pribadi ini adalah aplikasi web yang dibangun pakai **React** untuk praktikum Pemrograman Web Pertemuan ke-3. Tujuannya untuk membantu mencatat koleksi buku, buku yang sedang dibaca, atau yang baru ingin dibeli.
 
-Aplikasi ini sepenuhnya *client-side*, data disimpan di `localStorage` jadi aman walau browser ditutup, dan sudah dilengkapi fitur *routing* untuk pindah halaman. Oh ya, temanya juga Neon Ungu sesuai permintaan!
+Aplikasi ini smenyimpan data di `localStorage` jadi aman walaupun browser ditutup, dan sudah dilengkapi fitur *routing* untuk pindah halaman.
+
+## Run Demo Tugas Praktikum 3 Anselmus Herpin Hasugian (123140020)
+link: bukusaya.page.gd
 
 ## Cara Menjalankan Aplikasi
 Aplikasi ini tidak di-deploy, tapi bisa dijalankan dengan mudah secara lokal:
