@@ -23,8 +23,6 @@ Berikut adalah tampilan output terminal saat program dijalankan:
 
 ![Screenshot Output Program](output_program.png)
 
-*(Pastikan file gambar output_program.png sudah ada di folder ini)*
-
 ## Diagram Class (Bonus)
 
 Berikut adalah struktur class diagram dari sistem ini:
