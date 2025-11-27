@@ -1,44 +1,122 @@
-matakuliah_api
-==============
+# Aplikasi Manajemen Matakuliah (Pyramid Framework)
 
-Getting Started
----------------
+**Nama:** Anselmus Herpin Hasugian
+**NIM:** 123140020
+**Kelas:** RA
 
-- Change directory into your newly created project if not already there. Your
-  current directory should be the same as this README.txt file and setup.py.
+## Deskripsi Proyek
+Aplikasi API sederhana berbasis Pyramid Framework dan PostgreSQL untuk mengelola data matakuliah (CRUD).
 
-    cd matakuliah_api
+## Cara Instalasi & Menjalankan
 
-- Create a Python virtual environment, if not already created.
+1.  **Aktifkan Virtual Environment:**
+    ```bash
+    source ../venv/bin/activate  # atau .\..\venv\Scripts\activate di Windows
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install -e .
+    ```
+3.  **Konfigurasi Database:**
+    Pastikan `development.ini` pada bagian `sqlalchemy.url` sudah sesuai dengan kredensial PostgreSQL Anda.
+4.  **Migrasi Database:**
+    ```bash
+    alembic -c development.ini upgrade head
+    ```
+5.  **Jalankan Server:**
+    ```bash
+    pserve development.ini
+    ```
 
-    python3 -m venv env
+## API Endpoints
 
-- Upgrade packaging tools, if necessary.
+### 1. Get All Matakuliah
+Mengambil semua data matakuliah.
+* **URL:** `/api/matakuliah`
+* **Method:** `GET`
+* **Response:**
+    ```json
+    {
+        "matakuliahs": [
+            {
+                "id": 1,
+                "kode_mk": "IF101",
+                "nama_mk": "Pemrograman Web",
+                "sks": 3,
+                "semester": 4
+            }
+        ]
+    }
+    ```
 
-    env/bin/pip install --upgrade pip setuptools
+### 2. Get One Matakuliah
+Mengambil detail satu matakuliah berdasarkan ID.
+* **URL:** `/api/matakuliah/{id}`
+* **Method:** `GET`
+* **Contoh Request:** `/api/matakuliah/1`
+* **Response:**
+    ```json
+    {
+        "id": 1,
+        "kode_mk": "IF101",
+        "nama_mk": "Pemrograman Web",
+        "sks": 3,
+        "semester": 4
+    }
+    ```
 
-- Install the project in editable mode with its testing requirements.
+### 3. Add Matakuliah
+Menambahkan matakuliah baru.
+* **URL:** `/api/matakuliah`
+* **Method:** `POST`
+* **Body (JSON):**
+    ```json
+    {
+        "kode_mk": "IF202",
+        "nama_mk": "Sistem Operasi",
+        "sks": 3,
+        "semester": 4
+    }
+    ```
+* **Response:**
+    ```json
+    {
+        "message": "Success",
+        "data": { ... }
+    }
+    ```
 
-    env/bin/pip install -e ".[testing]"
+### 4. Update Matakuliah
+Mengupdate data matakuliah yang sudah ada.
+* **URL:** `/api/matakuliah/{id}`
+* **Method:** `PUT`
+* **Body (JSON):**
+    ```json
+    {
+        "nama_mk": "Sistem Operasi Lanjut",
+        "sks": 4
+    }
+    ```
+* **Response:**
+    ```json
+    {
+        "message": "Updated",
+        "data": { ... }
+    }
+    ```
 
-- Initialize and upgrade the database using Alembic.
+### 5. Delete Matakuliah
+Menghapus data matakuliah.
+* **URL:** `/api/matakuliah/{id}`
+* **Method:** `DELETE`
+* **Response:**
+    ```json
+    {
+        "message": "Deleted"
+    }
+    ```
 
-    - Generate your first revision.
-
-        env/bin/alembic -c development.ini revision --autogenerate -m "init"
-
-    - Upgrade to that revision.
-
-        env/bin/alembic -c development.ini upgrade head
-
-- Load default data into the database using a script.
-
-    env/bin/initialize_matakuliah_api_db development.ini
-
-- Run your project's tests.
-
-    env/bin/pytest
-
-- Run your project.
-
-    env/bin/pserve development.ini
+## Testing (CURL)
+Contoh perintah untuk menambah data:
+```bash
+curl -X POST http://localhost:6543/api/matakuliah -H "Content-Type: application/json" -d "{\"kode_mk\": \"IF101\", \"nama_mk\": \"Pemrograman Web\", \"sks\": 3, \"semester\": 4}"
